@@ -1,0 +1,21 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+  <span lift="CurrentUser.title"></span>
+  <div class="page-header">
+    <span lift="CurrentUser.header"></span>
+    <div id="ajax-spinner" class="pull-right" style="display: none;">
+      <img src="/media/img/spinner.gif" width="16" height="16"/>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <!--
+    <div class="span9">
+      <ul class="nav nav-tabs">
+        <span lift="Menus?group=settings;current_class=active"></span>
+      </ul>
+    </div>
+    -->
+    <div class="span12">
+      <div id="content"></div>
+    </div>
+  </div>
+</div>

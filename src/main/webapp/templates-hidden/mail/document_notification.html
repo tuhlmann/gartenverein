@@ -1,0 +1,36 @@
+<div>
+  <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+    <tr>
+      <td><h1 class="headline">Unser Gartenverein</h1></td>
+    </tr>
+    <tr>
+      <td><h2 name="title" class="subject">Titel</h2></td>
+    </tr>
+    <tr>
+      <td class="padded">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr class="label_info">
+            <td align="left">
+              Hallo <strong name="recipient-name"></strong>,<br/>
+              <span name="author-name"></span> hat ein Dokument erstellt, das in Ihrer Postbox für Sie hinterlegt wurde.<br/><br/>
+              Betreff: <span name="document-subject"></span><br/><br/>
+              <span class="f-if-attached">
+                Das Dokument wurde als Anhang dieser Mail hinzugefügt.<br/>
+                Alternativ können Sie das Dokument öffnen, indem Sie auf folgenden Link klicken:
+              </span>
+              <span class="f-if-not-attached">
+                Um das Dokument anzuzeigen, klicken Sie bitte auf folgenden Link:
+              </span>
+              <br/><br/>
+              <p align="center"><a name="document-url" href="#"></a></p>
+            </td>
+          </tr>
+        </table>
+        <div class="infotext"></div>
+      </td>
+    </tr>
+    <tr id="footer-row"></tr>
+  </table>
+  <!-- End of wrapper table -->
+</div>

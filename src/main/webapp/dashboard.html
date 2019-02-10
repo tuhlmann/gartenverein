@@ -1,0 +1,165 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+  <div class="lift:reactive"></div>
+
+  <div class="well summary">
+    <div class="row" lift="Dashboard.imagesOfDay">
+      <div class="col-md-4">
+          <img name="image-1" class="img-thumbnail pull-left" src="/media/img/day/day_1.jpg" style="max-height: 200px;">
+      </div>
+      <div class="col-md-4">
+        <div name="statement" class="text-center visible-md visible-lg"
+             style="margin-top:20px;font-family: 'Pacifico', cursive; font-size:32px; color: #225f80;">
+        </div>
+
+        <form lift="form.ajax?class=form-search">
+          <div id="db-multi-search-area" lift="Dashboard.search" class="row" style="margin-top:30px;">
+            <div class="col-md-12">
+              <div class="input-group">
+                <input type="text" class="form-control" id="db-multi-search" placeholder="Suche nach Mitglied, Garten, Dokument">
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+                </span>
+              </div><!-- /input-group -->
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+      <div class="col-md-4">
+        <img name="image-2" class="img-thumbnail pull-right" src="/media/img/day/day_2.jpg" style="max-height: 200px;">
+      </div>
+    </div>
+
+    <div id="db-multi-search-results" style="display:none;margin-top:15px;"></div>
+
+  </div>
+
+  <div lift="HasPerm?p=member:edit_all">
+    <h1>Geburtstage</h1>
+    <div class="well summary margin15">
+      <div lift="HasClient">
+        <table name="upcoming-birthdays" lift="Memberships.listBirthdays" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Geburtstag</th>
+              <th>Alter</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-model-list">
+            <tr name="eachModelObj">
+              <td name="name"></td>
+              <td name="birthday"></td>
+              <td name="age"></td>
+              <td><button name="greeting" type="button" class="btn btn-info btn-xs">Gratulieren</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+  <h1>Die nächsten Termine</h1>
+  <div class="well summary margin15">
+    <div lift="HasClient">
+      <div lift="Events.listDashboard">
+        <table name="event-list-table" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Fällig Am</th>
+              <th>Betreff</th>
+              <th>Hinzugefügt von</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-model-list">
+            <tr name="eachModelObj">
+              <td name="startDate"></td>
+              <td name="subject"></td>
+              <td name="author"></td>
+              <td><button name="action" type="button" class="btn btn-info btn-xs">Auswählen</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div name="event-list-empty">
+          Es sind keine Elemente zur Anzeige vorhanden.
+        </div>
+        <span data-lift="Menu.item?name=Events;donthide=true;linktoself=true;a:class=btn btn-info pull-right">Mehr &raquo;</span>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <h1>Anstehende Aufgaben</h1>
+  <div class="well summary margin15">
+    <div lift="HasClient">
+      <div lift="Tasks.listDashboard">
+        <table name="task-list-table" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Fällig Am</th>
+              <th>Betreff</th>
+              <th>Hinzugefügt von</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-model-list">
+            <tr name="eachModelObj">
+              <td name="dueDate"></td>
+              <td name="subject"></td>
+              <td name="author"></td>
+              <td><button name="action" type="button" class="btn btn-info btn-xs">Auswählen</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div name="task-list-empty">
+            Es sind keine Elemente zur Anzeige vorhanden.
+        </div>
+        <span data-lift="Menu.item?name=Tasks;donthide=true;linktoself=true;a:class=btn btn-info pull-right">Mehr &raquo;</span>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <h1>Schwarzes Brett</h1>
+  <div class="well summary margin15">
+    <div lift="HasClient">
+      <div lift="Notes.listDashboard">
+        <table name="note-list-table" class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Betreff</th>
+              <th>Hinzugefügt von</th>
+              <th>Zuletzt Geändert</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-model-list">
+            <tr name="eachModelObj">
+              <td name="subject"></td>
+              <td name="author"></td>
+              <td name="updatedAt"></td>
+              <td><button name="action" type="button" class="btn btn-info btn-xs">Auswählen</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div name="note-list-empty">
+          Es sind keine Elemente zur Anzeige vorhanden.
+        </div>
+        <span data-lift="Menu.item?name=Notes;donthide=true;linktoself=true;a:class=btn btn-info pull-right">Mehr &raquo;</span>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      App.views.user.Dashboard.init();
+    });
+  </script>
+
+</div>

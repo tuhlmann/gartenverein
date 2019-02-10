@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" debug="false" scanPeriod="10 minutes">
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>[%level] %logger{36} - %msg%n%ex{20}</pattern>
+    </encoder>
+    <threshold>DEBUG</threshold>
+  </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <File>./logs/gartenverein.log</File>
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %c{1}: %m%n</pattern>
+    </encoder>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>./logs/gartenverein.log.%d{yyyy-MM-dd}</fileNamePattern>
+    </rollingPolicy>
+    <threshold>INFO</threshold>
+    <append>true</append>
+  </appender>
+
+  <logger name="net.liftweb.util.TimeHelpers" level="WARN" />
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>
+

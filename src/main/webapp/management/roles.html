@@ -1,0 +1,17 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=Roles;h=Rollen;btn=Neue Rolle">
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.management.Roles.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

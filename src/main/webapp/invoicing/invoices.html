@@ -1,0 +1,26 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=Invoices">
+    <div id="createNewHeader">
+      <h1 lift="Invoices.createNew">Rechnungen</span>
+        <button style="margin-bottom:5px; vertical-align: bottom;" name="new-screen" type="button" class="pull-right btn btn-primary">Neue Rechnung</button>
+      </h1>
+    </div>
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="invoice-preview" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Rechnung Vorschau"><i class="icon-eye-open"></i></button>
+      <button name="gen-documents" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Rechnungsdokumente erstellen"><i class="icon-external-link"></i></button>
+      <!--<button name="remove" type="button" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>-->
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.invoicing.Invoices.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>
+

@@ -1,0 +1,28 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=InvoiceArticles">
+    <div id="createNewHeader">
+      <h1 lift="InvoiceArticles.createNewInvoiceArticles">Rechnungsartikel
+        <span class="pull-right">
+          <button style="margin-bottom:5px; vertical-align: bottom;" name="new-dynamic-article-screen" type="button" class="btn btn-primary">Dynamischer Artikel</button>
+          &nbsp;
+          <button style="margin-bottom:5px; vertical-align: bottom;" name="new-regular-article-screen" type="button" class="btn btn-primary">Stammartikel</button>
+        </span>
+      </h1>
+    </div>
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="remove" type="button" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.invoicing.Articles.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>
+

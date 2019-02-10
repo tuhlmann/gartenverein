@@ -1,0 +1,23 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+  <head_merge>
+    <script>
+      $(document).ready(function() {
+        //AppPages.Invoices.init();
+      });
+    </script>
+  </head_merge>
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=Invoices">
+    <div id="createNewHeader">
+      <h1 lift="Invoices.createNew">Abrechnungen für Garten <span name="member-name">Mitgliedsname</span>
+        <button style="margin-bottom:5px; vertical-align: bottom;" name="new-screen" type="button" class="pull-right btn btn-primary">Neue Abrechnung</button>
+      </h1>
+    </div>
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="gen-report" type="button" data-toggle="tooltip" title="Rechnungsdokument erstellen" class="btn btn-info btn-xs">Dokument erstellen</button>
+    </div>
+  </div>
+
+
+</div>

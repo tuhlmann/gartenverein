@@ -1,0 +1,19 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=Notes;h=Notizen;btn=Neue Notiz">
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="action" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Auswählen"><i class="icon-ok"></i></button>
+      <button name="remove" type="button" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.user.Notes.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

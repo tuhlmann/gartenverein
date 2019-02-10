@@ -1,0 +1,61 @@
+<div data-lift="surround?with=default;at=content">
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8">
+
+      <div lift="Notices"></div>
+
+      <div id="claim-account-form" class="form form-horizontal">
+        <div lift="ClaimAccountScreen">
+          <i>Bitte geben Sie alle Daten wie im Anschreiben angegeben ein,
+             um Ihren Zugang einzurichten.</i>
+
+          <fieldset>
+            <!-- <legend>Legende...</legend> -->
+            <div style="padding-top: 20px;">
+              <div class="fields">
+                <div class="fieldContainer form-group">
+                  <label class="control-label col-md-3"></label>
+                  <span class="help"></span>
+                  <div class="col-md-9">
+                    <div class="controls">
+                      <span class="value input-xlarge"></span>
+                      <div class="errors">
+                        <div class="error field-error"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                  <button type="submit" class="next btn btn-primary">Bestätigen</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <i>In dem Sie die Anmeldung abschließen, eklären Sie sich mit unseren <a href="#">AGB</a> einverstanden.</i>
+
+        </div>
+      </div>
+
+      <div id="claim-account-response-success" style="display: none;">
+
+          <div class="alert alert-success">
+
+              Vielen Dank!<br>
+              Wir haben die eingegebenen Daten gespeichert und Ihnen an die angegebene
+              Adresse eine Email geschickt.<br>
+              Um Ihre Registrierung abzuschließen, klicken Sie bitte auf den in der Email angegebenen Link.<br>
+              Sie werden dann aufgefordert, ein neues Passwort zu vergeben und können sich im Anschluss mit Ihrer
+              Emailadresse und dem vergebenen Passwort anmelden.
+
+          </div>
+
+      </div>
+
+
+    </div>
+  </div>
+</div>

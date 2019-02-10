@@ -1,0 +1,51 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <h1>Zählerstände einpflegen</h1>
+  <div class="well summary margin15">
+    <p>
+      Nutzen Sie diese Seite, um die Wert der jährlichen Ablesungen für alle Mitglieder schnell einzupflegen.
+    </p>
+
+    <form lift="form.ajax?class=form-inline">
+      <div id="ajax-spinner" class="pull-right" style="display:none;">
+        <img height="16" width="16" src="/media/img/spinner.gif">
+      </div>
+
+      <div id="f-yearly-readings-settings" lift="YearlyReadings.searchGardens"  style="margin-top:30px;">
+        <div class="form-group">
+          <label for="i-readingDate">Datum der Ablesung:</label>
+          <input type="date" class="form-control input-large" id="i-readingDate" placeholder="Datum der Ablesung">
+        </div>
+        <!--
+        <div class="form-group">
+          <label for="i-readingDate" class="col-md-5 control-label">Auch Gärten anzeigen, die bereits erfasst wurden</label>
+          <div class="col-md-1">
+            <input type="checkbox" id="i-list-all-gardens">
+          </div>
+        </div>
+        -->
+        <div class="form-group">
+          &nbsp;&nbsp;
+          <button type="submit" class="btn btn-default">Gärten suchen</button>
+        </div>
+
+        <input type="hidden" name="submit-helper" />
+      </div>
+    </form>
+
+    <div id="d-yearly-readings-summary"></div>
+
+  </div>
+
+  <div id="d-yearly-readings-gardens">
+
+  </div>
+
+
+  <script>
+    $(document).ready(function() {
+      App.views.actions.YearlyReadings.init();
+    });
+  </script>
+
+</div>

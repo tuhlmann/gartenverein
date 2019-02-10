@@ -1,0 +1,187 @@
+<div lift="surround?with=bare-page;at=content">
+  <script>
+    function forgot() {
+      $("#fpPassword").val("true");
+      $('[name=login-form]').submit();
+      $("#fpPassword").val("false");
+    }
+  </script>
+  <style>
+    #id_email {
+      width: 12em;
+    }
+
+    #id_password {
+      width: 10em;
+    }
+  </style>
+
+  <div class="page-header" style="border:none;">
+    <h1>Anmeldung
+      <div id="ajax-spinner" style="display:none; float:right;">
+        <img height="16" width="16" src="/media/img/spinner.gif">
+      </div>
+    </h1>
+  </div>
+
+  <div class="well" style="padding:50px">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="hidden-tablet" src="/media/img/app/banner_img1.png" style="max-width:400px;" alt="Unser Gartenverein" />
+      </div>
+      <div class="col-md-6">
+        <form lift="Form.ajax?class=form-inline;name=login-form">
+          <span lift="UserLogin.userPasswordForm">
+            <fieldset id="login-fields-user-pw">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="row">
+                    <label class="form-group" for="id_email"><lift:loc locid="login.email.label">Email</lift:loc></label>
+                  </div>
+                  <div class="row">
+                    <input class="form-control" maxlength="254" id="id_email" size="32" name="email" type="email" value=""/>
+                    <span data-alertid="id_email_err" class="alert-block"></span>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row">
+                    <label class="form-group" for="id_password"><lift:loc locid="login.password.label">Password</lift:loc></label>
+                  </div>
+                  <div class="row">
+                    <input class="form-control" id="id_password"/>
+                    <span data-alertid="id_password_err" class="alert-block"></span>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="row">
+                    <label class="form-group" for="id_submit">&nbsp;</label>
+                  </div>
+                  <div class="row">
+                    <button name="btn-user-pw-submit" type="submit" class="btn btn-primary form-control"><lift:loc locid="login.submit.label">Sign In</lift:loc></button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top:5px;">
+                <div class="form-group">
+                  <label class="checkbox">
+                    <input class="xlarge" name="remember"/>
+                    <lift:loc locid="login.rememberme.label">remember me</lift:loc>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="margin-top:10px;">
+                <div class="form-group">
+                  <input id="fpPassword" name="fpPassword" type="hidden" value="false"/>
+                  <a class="text-normal" href="javascript://" onclick="forgot();return false;"><lift:loc locid="login.forgotten.password">Forgotten Password?</lift:loc></a>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group" style="margin-top:120px;">
+                  <div class="text-normal">
+                    <span>Sie haben noch keinen Zugang?
+                      <span data-lift="Menu.item?name=ReqInvite">Zugang anfordern.</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </span>
+        </form>
+        <form lift="Form.ajax?class=form-inline">
+          <span lift="UserLogin.twoFactorAuthForm">
+            <fieldset id="login-fields-2f-auth" style="display:none;">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="row">
+                    <label class="form-group" for="id_email"><lift:loc locid="login.2f_pin.label">2F Pin</lift:loc></label>
+                  </div>
+                  <div class="row">
+                    <input class="form-control" maxlength="6" id="id_2f_pin" size="8" name="2f-pin" type="text" value=""/>
+                    <span data-alertid="id_2f_pin_err" class="alert-block"></span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-md-offset-4">
+                  <div class="row">
+                    <label class="form-group" for="id_2f_submit">&nbsp;</label>
+                  </div>
+                  <div class="row">
+                    <button name="btn-2f-auth-submit" type="submit" class="btn btn-primary form-control"><lift:loc locid="login.2f_submit.label">Sign In</lift:loc></button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--
+<div data-lift="surround?with=default;at=content">
+  <div lift="Notices"></div>
+  <div class="row">
+    <div class="span12">
+      <form lift="Form.ajax?class=form-horizontal">
+        <span lift="UserLogin">
+          <fieldset>
+            <div class="control-group">
+              <label class="control-label" for="email"></label>
+              <div class="controls">
+                <p><strong>Geben Sie Ihre Emailadresse ein:</strong></p>
+                <input class="xlarge" maxlength="254" id="id_email" size="32" name="email" type="text" value="" />
+                <span lift="Notices.id?id=id_email_err"></span>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <p><strong>Sind Sie bereits registriert?</strong></p>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <input id="no_password" /> <span>Nein, ich benötige ein Passwort.</span>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <input id="yes_password" /> <span>Ja, ich besitze ein <strong>Passwort</strong>:</span>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <input class="xlarge" id="id_password" />
+                <span lift="Notices.id?id=id_password_err"></span>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="remember"></label>
+              <div class="controls">
+                <label class="checkbox">
+                  <input class="xlarge" name="remember" />
+                  Später automatisch anmelden.
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <input id="id_submit" />
+            <input type="submit" class="btn btn-primary" value="Submit"></input>
+            <span lift="Menu.item?name=Home;a:class=btn">Abbrechen</span>
+          </div>
+        </span>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      App.views.user.Login.init();
+    });
+  </script>
+</div>
+-->

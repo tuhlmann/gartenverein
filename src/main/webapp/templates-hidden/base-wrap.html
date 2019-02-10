@@ -1,0 +1,108 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=""><!-- Google will often use this as its description of your page/site. Make it good. -->
+    <meta name="author" content="unser-gartenverein.de">
+    <meta name="Copyright" content="Copyright unser-gartenverein.de 2013. All Rights Reserved.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- css -->
+    <!--<link href='https://fonts.googleapis.com/css?family=Original+Surfer' rel='stylesheet' type='text/css'>-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+    
+    <!-- http://www.google.com/fonts#UsePlace:use/Collection:Montserrat Wertung: *** -->
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
+
+    <!-- Minified styles for production-->
+    <link data-lift="ProductionOnly" href="/media/styles/styles.css" rel="stylesheet">
+
+    <!-- full reloadable styles for development -->
+    <link data-lift="NotInProduction" rel="stylesheet/less" type="text/css" href="/media/styles/styles.less">
+
+    <!--<script src="/media/gen/script.js"></script>-->
+    <script data-lift="NotInProduction" src="/media/js/libs/less-1.4.1.min.js"></script>
+    <!--<link   data-lift="NotInProduction" href="/media/css/styles.css" rel="stylesheet">-->
+
+    <script lift="JavaScriptLoader?prod=/media/js/script.js;dev=/media/js/script.jsm;pf=/media/js/"></script>
+
+    <!-- fav and touch icons -->
+    <link rel="shortcut icon" href="/media/img/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/media/img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/media/img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/media/img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/media/img/ico/apple-touch-icon-57-precomposed.png">
+
+    <!--<script type="text/javascript" src="/media/ckeditor/ckeditor.js"></script>-->
+    <!--<script type="text/javascript" src="/media/redactor/redactor.min.js"></script>
+    <script type="text/javascript" src="/media/redactor/fullscreen.js"></script>
+    <link href='/media/redactor/redactor.css' rel='stylesheet' type='text/css'>-->
+
+  </head>
+  <body>
+    <span data-lift="Html5Shim"></span>
+    <nav class="navbar navbar-default navbar-fixed-top hidden-print" role="navigation">
+      <div class="navbar-header">
+        <button type="button" data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a lift="onlyIfSidebar" id="sidebar-menu-toggle" class="navbar-brand" href="Javascript://"><i class="icon-chevron-left"></i></a>
+        <a class="navbar-brand" href="/">unser-gartenverein.de</a>
+      </div>
+      <div class="navbar-header navbar-right">
+        <div class="navbar-collapse collapse">
+          <span lift="UserTopbar"></span>
+        </div>
+      </div>
+      <div class="navbar-collapse collapse">
+        <span lift="ClientTopbar"></span>
+        <ul class="nav navbar-nav">
+          <li>
+            <span lift="Menus.group?group=topbar"></span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="jumbotron subhead" id="overview" style="padding-top:1px;padding-bottom:5px;margin-bottom:0px;">
+  	  <div lift="classIfWidth?fixed=container;fluid=no-container-fluid">
+        <h1 class="headline"><span>Unser Gartenverein</span> - <span class="subheader">Mein Garten, mein Verein</span></h1>
+      </div>
+	  </header>
+
+    <div name="eu-cookie" lift="EuCookiePresenter">
+      <div class="alert alert-info" style="margin-bottom: 0;">
+        <div class="row">
+          <div class="col-md-11">
+            <i>unser-gartenverein.de</i> nutzt Cookies, um Ihnen unsere Webseite bestmöglichst zu präsentieren.<br>
+             Wenn Sie fortfahren ohne Ihre Browsereinstellungen anzupassen, gehen wir davon aus, 
+             dass Sie mit deren Verwendung einverstanden sind. 
+             Hier <a href="http://www.aboutcookies.org/Default.aspx?page=1" target="_blank">erfahren Sie mehr über Cookies.</a><br>
+          </div>
+          <div class="col-md-1">
+            <div class="pull-right">
+              <button type="button" name="btn-place-eu-cookie" class="btn btn-sm btn-default">Ok</button>           
+            </div>
+          </div>
+        </div>          
+		  </div>
+    </div>
+
+    <div id="content-wrap" class="container-fluid"></div><!-- /container -->
+
+    <div id="bs-notifier" class="notifications top-center"></div>
+  </body>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.common.BaseWrap.init();
+      });
+    </script>
+  </lift:tail>
+
+</html>

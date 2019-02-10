@@ -1,0 +1,70 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div><span data-lift="Menu.item?name=Events;donthide=true;linktoself=true"><i class="icon-white icon-double-angle-left"></i> Alle Termine</span></div>
+
+  <div lift="OneEvent.view">
+
+    <div class="row">
+      <div class="col-md-7">
+        <div class="well bordered-block">
+          <div class="large serif"><span name="subject">Subject</span></div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="well bordered-block serif">
+          <div class="normal">
+            <table class="table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>Autor</td>
+                  <td name="author"></td>
+                </tr>
+                <tr>
+                  <td>Erstellt</td>
+                  <td name="created-at"></td>
+                </tr>
+                <tr name="start-date-row">
+                  <td>Fällig am:</td>
+                  <td name="start-date"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="well bordered-block serif">
+          <div name="summary" class="medium serif">Zusammenfassung</div>
+        </div>
+      </div>
+    </div>
+
+    <div name="attachments-block" class="row">
+      <div class="col-md-12">
+        <div class="well bordered-block">
+          <div name="attachments" class="normal serif">Angehängte Dokuments</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.user.OneEvent.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

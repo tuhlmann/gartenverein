@@ -1,0 +1,69 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div><span data-lift="Menu.item?name=MyDocuments;donthide=true;linktoself=true"><i class="icon-white icon-double-angle-left"></i> Alle Dokumente</span></div>
+
+  <div lift="OneDocument.view">
+
+    <div class="row">
+      <div class="col-md-7">
+        <div name="details">
+          <div class="well bordered-block">
+            <div class="large serif"><span name="subject">Subject</span></div>
+          </div>
+          <div name="description-block" class="well bordered-block">
+            <div class="large serif"><span name="description">Description</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="well bordered-block serif">
+          <div class="normal">
+            <table class="table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>Autor</td>
+                  <td name="author"></td>
+                </tr>
+                <tr>
+                  <td>Empfänger</td>
+                  <td name="recipient"></td>
+                </tr>
+                <tr>
+                  <td>Erstellt</td>
+                  <td name="created-at"></td>
+                </tr>
+                <tr>
+                  <td>Name</td>
+                  <td>
+                    <a name="download" href="#" target="_newtab" data-toggle="tooltip" title="Datei herunterladen"><span name="name"></span></a>&nbsp;
+                    <a name="download" href="#" target="_newtab" class="btn btn-info btn-mini" data-toggle="tooltip" title="Datei herunterladen"><i class="icon-download-alt"></i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Typ</td>
+                  <td name="type"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.user.OneDocument.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

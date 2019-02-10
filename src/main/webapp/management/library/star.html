@@ -1,0 +1,70 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div><span data-lift="Menu.item?name=DocumentFolders;donthide=true;linktoself=true"><i class="icon-white icon-double-angle-left"></i> Alle Dokumentenmappen</span></div>
+
+  <div lift="OneDocumentFolder.view">
+
+    <div class="row-fluid">
+      <div class="span7">
+        <div class="well bordered-block">
+          <div class="large serif"><span name="subject">Subject</span></div>
+        </div>
+      </div>
+
+      <div class="span5">
+        <div class="well bordered-block serif">
+          <div class="normal">
+            <table class="table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <td>Autor</td>
+                  <td name="author"></td>
+                </tr>
+                <tr>
+                  <td>Erstellt</td>
+                  <td name="created-at"></td>
+                </tr>
+                <tr name="due-date-row">
+                  <td>Fällig am:</td>
+                  <td name="due-date"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="well bordered-block serif">
+          <div name="summary" class="medium serif">Summary</div>
+        </div>
+      </div>
+    </div>
+
+    <div name="attachments-block" class="row-fluid">
+      <div class="span12">
+        <div class="well bordered-block">
+          <div name="attachments" class="normal serif">Angehängte Dokuments</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.management.OneDocumentFolder.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

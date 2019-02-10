@@ -1,0 +1,82 @@
+<div data-lift="surround?with=settings-wrap;at=content">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Zwei-Faktor Authentifizierung einrichten</h2>
+
+      <div lift="TwoFactorWizard.authenticate">
+        <p>
+          Um Ihren Nutzerzugang besser zu schützen und Zwei-Faktor Authentifizierung einzurichten,
+          geben Sie bitte erneut Ihr Passwort ein und bestätigen Sie mit weiter.
+        </p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="id_password"><lift:loc locid="login.password.label">Password</lift:loc></label>
+            <div class="col-md-5">
+              <input class="form-control" id="id_password" placeholder="Passwort"/>
+              <input name="submit-helper" type="hidden"/>
+              <span data-alertid="id_password_err" class="alert-block"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div lift="TwoFactorWizard.setup">
+        <p>
+          Bitte richten Sie einen Eintrag für Zwei-Faktor-Authentifizierung in Google Authenticator ein.
+        </p>
+        <p>
+          Sie können den angezeigten QR Code nutzen, um Google Authenticator ganz einfach einzurichten.
+          Lesen Sie dazu einfach den QR Code mit Google Authenticator ein:
+        </p>
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-4">
+            <p>
+              <img name="qr-code">
+            </p>
+          </div>
+
+          <div class="col-md-8">
+            <p>
+              Alternativ geben Sie die folgenden Angaben manuell ein:
+            </p>
+            <p>
+              <strong>User:</strong> <span name="two-f-code-part-user"></span>
+            </p>
+            <p>
+              <strong>Domäne:</strong> <span name="two-f-code-part-domain"></span>
+            </p>
+            <p>
+              <strong>Secret:</strong> <span name="two-f-code-part-secret"></span>
+            </p>
+          </div>
+
+        </div>
+        <form class="form-inline">
+          <input name="submit-helper" type="hidden">
+        </form>
+      </div>
+
+
+      <div lift="TwoFactorWizard.disable">
+        <p>
+          Sie nutzen bereits Zwei-Faktor Authentifizierung. Um diese zusätzliche Sicherheit zu
+          deaktivieren, bestätigen Sie bitte mit Ihrem Passwort.
+        </p>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="id_password"><lift:loc locid="login.password.label">Password</lift:loc></label>
+            <div class="col-md-5">
+              <input class="form-control" id="id_password" placeholder="Passwort"/>
+              <input name="submit-helper" type="hidden"/>
+              <span data-alertid="id_password_err" class="alert-block"></span>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

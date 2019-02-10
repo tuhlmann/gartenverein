@@ -1,0 +1,30 @@
+<div>
+  <!-- Wrapper/Container Table: Use a wrapper table to control the width and the background color consistently of your email. Use this approach instead of setting attributes on the body tag. -->
+  <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+    <tr>
+      <td><h1 class="headline">Unser Gartenverein</h1></td>
+    </tr>
+    <tr>
+      <td><h2 name="title" class="subject">Titel</h2></td>
+    </tr>
+    <tr>
+      <td class="padded">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+          <tr class="label_info">
+            <td align="left">
+              Hallo <strong name="recipient-name"></strong>,<br/>
+              <span name="author-name"></span> hat <span name="item-desc-1"></span> erstellt.<br/><br/>
+              Betreff: <span name="subject"></span><br/><br/>
+              Um <span name="item-desc-2"></span> anzuzeigen, klicken Sie bitte auf folgenden Link:
+              <br/><br/>
+              <p align="center"><a name="url" href="#"></a></p>
+            </td>
+          </tr>
+        </table>
+        <div class="infotext"></div>
+      </td>
+    </tr>
+    <tr id="footer-row"></tr>
+  </table>
+  <!-- End of wrapper table -->
+</div>

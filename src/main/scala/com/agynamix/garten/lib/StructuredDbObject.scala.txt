@@ -1,0 +1,25 @@
+package com.agynamix.garten.lib
+
+import com.agynamix.garten.model.User
+import net.liftweb.json.JsonAST.JObject
+import net.liftweb.mapper.KeyedMetaMapper
+import net.liftweb.mapper.Mapper
+import net.liftweb.mapper.MetaMapper
+import net.liftweb.mapper.LongKeyedMetaMapper
+import com.agynamix.garten.model.share.MapperWithId
+import net.liftweb.mapper.LongKeyedMapper
+import net.liftweb.mapper.QueryParam
+
+
+trait StructuredDbObject[OwnerType <: LongKeyedMapper[OwnerType]] extends LongKeyedMetaMapper[OwnerType] {
+
+  self: OwnerType =>
+
+  def keyFields(user: User, args: Any*): (String, List[Any])
+
+  def createInstance(user: User, args: Any*): OwnerType
+
+  def findRecords(by: QueryParam[OwnerType]*): List[OwnerType] = findAll(by :_*)
+
+
+}

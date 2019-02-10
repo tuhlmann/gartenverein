@@ -1,0 +1,135 @@
+<div data-lift="surround?with=base-wrap;at=content-wrap">
+	<head_merge>
+	<title lift="Menu.title">unser-gartenverein.de: %*%</title>
+	</head_merge>
+
+	<div class="main-content">
+		<div lift="Notices"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-12">
+							<img class="img-responsive" src="/media/img/app/banner_home.jpg">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Was bietet Ihnen Unser Gartenverein?</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<ul class="icons-ul">
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>
+								  Pflegen Sie gemeinsam alle Vereinsdaten ganz bequem von zu Hause oder unterwegs.
+								  </li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>
+								  Nutzen Sie den integrierten Kalender, erstellen Sie Termine und Aufgaben
+								  für den gesamten Verein oder einzelne Mitglieder.</li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>Versenden
+									Sie E-Mails an Ihre Mitglieder mit aktuellen Informationen aus
+									dem Vereinsleben.</li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>Im Handumdrehen
+								  erstellen	Sie Einladungen zu Jubilarfeiern, Vereinssitzungen und
+								  anderen Events Ihres Vereins.</li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<ul class="icons-ul">
+							  <li class="lead"><i class="icon-li icon-ok color-slash"></i>
+							    Erstellen Sie auf Knopfdruck Serienbriefe an Ihre Mitglieder.
+							  </li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>Erhalten
+									Sie schnell und einfach einen &Uuml;berblick &uuml;ber Ihre
+									G&auml;rten.</li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>Erfassen
+									Sie alle relevanten Daten zu Ihren G&auml;rten wie
+									Fl&auml;che, Gr&ouml;&szlig;e, Elektroz&auml;hler etc.</li>
+								<li class="lead"><i class="icon-li icon-ok color-slash"></i>Erstellen
+									Sie Rechnungen und andere personenbezogenen Dokumente zuverlässig und
+									termingerecht.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="row large-margin top">
+						<div class="col-md-12">
+							<p class="lead">
+								Neugierig? Dann informieren Sie sich noch heute! <span
+									data-lift="Menu.item?name=About;donthide=true;linktoself=true;a:class=btn btn-info">Weitere
+									Informationen &raquo; </span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12">
+							<img class="hidden-sm img-responsive" src="/media/img/app/banner_img1.png"
+								alt="Unser Gartenverein" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Newsletter</h3>
+							<p class="lead">
+								Abonnieren Sie unseren <strong>Newsletter</strong>, um &uuml;ber
+								Ver&auml;nderungen und Updates benachrichtigt zu werden.
+							</p>
+							<form lift="Form.ajax?class=form-inline">
+								<div data-lift="SubscribeEmail">
+								  <div class="form-group">
+									  <input class="form-control" id="id-subscribe-email-in" type="text"	placeholder="Ihre Emailadresse">
+									</div>
+									<button type="submit" class="btn btn-default">Ok</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<h3>Wir bei Twitter</h3>
+							<a class="twitter-timeline"
+								href="https://twitter.com/unser_garten" height="350"
+								data-widget-id="340461594406440960">Tweets von @unser_garten</a>
+							<script>
+								!function(d, s, id) {
+									var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
+											.test(d.location) ? 'http'
+											: 'https';
+									if (!d.getElementById(id)) {
+										js = d.createElement(s);
+										js.id = id;
+										js.src = p
+												+ "://platform.twitter.com/widgets.js";
+										fjs.parentNode.insertBefore(js, fjs);
+									}
+								}(document, "script", "twitter-wjs");
+							</script>
+						</div>
+					</div>
+				</div>
+				<!--
+        <hr class="soften">
+        -->
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	  <span lift="embed?what=/templates-hidden/parts/footer"></span>
+	</div>
+
+	<lift:tail>
+		<script>
+			$(document).ready(function() {
+				App.views.user.Home.init();
+				$(document).ready(function() {
+					$('.carousel').carousel({
+						interval : 10000
+					});
+				});
+			});
+		</script>
+	</lift:tail>
+
+</div>

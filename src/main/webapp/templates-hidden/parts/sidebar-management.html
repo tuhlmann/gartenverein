@@ -1,0 +1,153 @@
+  <div class="well sidebar-nav" style="padding: 8px 0;">
+    <ul class="nav nav-list">
+
+      <li class="nav-header disabled"><a>Management</a></li>
+      <li>
+        <span data-lift="Menu.item?name=Dashboard;donthide=true;linktoself=true"><i class="icon-white icon-home"></i> Cockpit</span>
+      </li>
+      <li>
+          <span data-lift="Menu.item?name=MyDocuments;donthide=true;linktoself=true"><i class="icon-white icon-folder-open-alt"></i> Meine Dokumente</span>
+      </li>
+      <li>
+        <span data-lift="Menu.item?name=GeneratedDocuments;donthide=true;linktoself=true"><i class="icon-white icon-pencil"></i> Generierte Dokumente</span>
+      </li>
+      <li>
+          <span data-lift="Menu.item?name=DocumentFolders;donthide=true;linktoself=true"><i class="icon-white icon-stackexchange"></i> Dokumentenmappen</span>
+      </li>
+
+      <li class="nav-header disabled"><a>Planung</a></li>
+      <li>
+        <span data-lift="Menu.item?name=Notes;donthide=true;linktoself=true"><i class="icon-white icon-pencil"></i> Notizen</span>
+      </li>
+      <li>
+        <span data-lift="Menu.item?name=Tasks;donthide=true;linktoself=true"><i class="icon-white icon-check-sign"></i> Aufgaben</span>
+      </li>
+      <li>
+        <span data-lift="Menu.item?name=Events;donthide=true;linktoself=true"><i class="icon-white icon-calendar"></i> Termine</span>
+      </li>
+      <li>
+        <span data-lift="Menu.item?name=BlogManager;donthide=true;linktoself=true"><i class="icon-white icon-pencil"></i> Blog</span>
+      </li>
+
+      <!--
+      <li>
+        <span data-lift="Menu.item?name=Association;donthide=true;linktoself=true"><i class="icon-white icon-legal"></i> Meine Vereine</span>
+      </li>
+      -->
+      <li class="nav-header" lift="HasClient">
+        <a href="#" title=""><span style="color:#999999;" data-target="#stammdaten_options" data-toggle="collapse">Stammdaten <i class="icon-caret-right"></i></span></a>
+
+        <ul class="nav nav-list collapse out" id="stammdaten_options" >
+          <li>
+            <span data-lift="Menu.item?name=Members;donthide=true;linktoself=true"><i class="icon-white icon-group"></i> Mitglieder</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=Garden;donthide=true;linktoself=true"><i class="icon-white icon-fire"></i> Gärten</span>
+          </li>
+
+          <!--<li>
+            <span data-lift="Menu.item?name=Team;donthide=true;linktoself=true"><i class="icon-white icon-group"></i> Nutzer verwalten (depr.)</span>
+          </li>-->
+
+          <li>
+            <span data-lift="Menu.item?name=MemberRoles;donthide=true;linktoself=true"><i class="icon-white icon-shield"></i> Berechtigungen</span>
+          </li>
+
+          <li>
+            <span data-lift="Menu.item?name=MemberTypes;donthide=true;linktoself=true"><i class="icon-white icon-code-fork"></i> Arten der Mitgliedschaft</span>
+          </li>
+
+          <li>
+            <span data-lift="Menu.item?name=MemberPositions;donthide=true;linktoself=true"><i class="icon-white icon-book"></i> Positionen im Verein</span>
+          </li>
+
+          <li>
+            <span data-lift="Menu.item?name=PropertyTaxes;donthide=true;linktoself=true"><i class="icon-white icon-money"></i> Grundsteuern</span>
+          </li>
+
+          <li>
+            <span data-lift="Menu.item?name=Recipients;donthide=true;linktoself=true"><i class="icon-white icon-group"></i> Verteiler</span>
+          </li>
+
+          <li>
+            <span data-lift="Menu.item?name=DocumentTemplates;donthide=true;linktoself=true"><i class="icon-white icon-folder-open-alt"></i> Vorlagen</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-header" lift="HasClient">
+        <a href="#" title=""><span style="color:#999999;" data-target="#billing_options" data-toggle="collapse">Rechnungsstellung <i class="icon-caret-right"></i></span></a>
+
+        <ul class="nav nav-list collapse out" id="billing_options" >
+
+          <li>
+            <span data-lift="Menu.item?name=Invoices;donthide=true;linktoself=true"><i class="icon-white icon-inbox"></i> Rechnungen</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=InvoiceArticle;donthide=true;linktoself=true"><i class="icon-white icon-group"></i> Artikelverwaltung</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=VAT;donthide=true;linktoself=true"><i class="icon-white icon-money"></i> Mehrwertsteuer</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=NumberRanges;donthide=true;linktoself=true"><i class="icon-white icon-superscript"></i> Nummernkreise</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=TextBlocks;donthide=true;linktoself=true"><i class="icon-white icon-file-text-alt"></i> Textblöcke</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=InvoiceArticles;donthide=true;linktoself=true"><i class="icon-white icon-list-alt"></i> Rechnungsartikel</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=PropertyValues;donthide=true;linktoself=true"><i class="icon-white icon-list-alt"></i> Schlüssel und Werte</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-header" lift="HasClient">
+        <a href="#" title=""><span style="color:#999999;" data-target="#todo_actions" data-toggle="collapse">Aktionen <i class="icon-caret-right"></i></span></a>
+
+        <ul class="nav nav-list collapse out" id="todo_actions" >
+
+          <li>
+            <span data-lift="Menu.item?name=MeterReadings;donthide=true;linktoself=true"><i class="icon-white icon-cogs"></i> Zählerstände</span>
+          </li>
+        </ul>
+      </li>
+
+      <!--<li class="divider"></li>-->
+
+<!--
+      <li>
+        <span data-lift="Menu.item?name=Billing;donthide=true;linktoself=true"><i class="icon-white icon-inbox"></i> Jahresabrechnung</span>
+      </li>
+-->
+<!--
+      <li class="nav-header">Ihre Daten</li>
+      <li>
+        <span data-lift="Menu.item?name=Account;donthide=true;linktoself=true"><i class="icon-cog"></i> Persönliche Einstellungen</span>
+      </li>
+-->
+      <!--<li class="divider"></li>
+      <li>
+        <a href="help.htm"><i class="icon-info-sign"></i> Help</a>
+      </li>-->
+
+
+      <li class="nav-header" lift="IsSuperUser">
+        <a href="#" title=""><span style="color:#999999;" data-target="#su_options" data-toggle="collapse">Superuser <i class="icon-caret-right"></i></span></a>
+
+        <ul class="nav nav-list collapse out" id="su_options" >
+          <li>
+            <span data-lift="Menu.item?name=UserAccounts;donthide=true;linktoself=true"><i class="icon-white icon-male"></i> Alle Nutzer verwalten</span>
+          </li>
+          <li>
+            <span data-lift="Menu.item?name=ClientsAndAccounts;donthide=true;linktoself=true"><i class="icon-white icon-hospital"></i> Alle Vereine verwalten</span>
+          </li>
+        </ul>
+      </li>
+
+
+
+    </ul>
+  </div>

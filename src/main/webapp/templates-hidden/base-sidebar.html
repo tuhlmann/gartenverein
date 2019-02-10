@@ -1,0 +1,29 @@
+<div data-lift="surround?with=base-wrap;at=content-wrap">
+  <head_merge>
+    <title lift="Menu.title">AGYNAMIX Garten: %*%</title>
+  </head_merge>
+
+  <div class="main-content">
+
+    <!--<div lift="Notices?cls=page-alert"></div>-->
+    <div lift="BsNotify"></div>
+
+    <div class="row">
+
+      <div data-lift="embed?what=parts/sidebar"></div>
+
+      <div id="application-content" class="col-md-9">
+
+        <!--
+        We can put some notification here that should be visible on virtually
+        all pages.
+        -->
+
+        <div id="content">Content is bound here</div>
+
+      </div>
+    </div>
+
+  </div>
+  <span lift="embed?what=/templates-hidden/parts/footer"></span>
+</div>

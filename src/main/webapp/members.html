@@ -1,0 +1,20 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=Memberships;h=Mitglieder;btn=Neues Mitglied">
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="yearly-bill" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Jahresabrechnung"><i class="icon-bar-chart"></i></button>
+      <button name="invite" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Einladung erneut versenden"><i style="font-size: 12px;" class="icon-share-alt"></i></button>
+      <button name="remove" type="button" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.user.Member.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

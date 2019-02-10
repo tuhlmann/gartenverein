@@ -1,0 +1,69 @@
+<div>
+
+  <div class="lift:reactive"></div>
+
+  <h1 name="heading"><span name="heading-txt">Heading</span>
+    <button style="margin-bottom:5px; vertical-align: bottom;" name="new-screen" type="button" class="pull-right btn btn-primary">Button Text</button>
+  </h1>
+
+  <hr/>
+
+  <div class="panel-group" id="master-detail-accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#master-detail-accordion" href="#master-table-collapse">
+          Übersicht <i style="font-size: 20px;" class="icon-double-angle-up pull-right"></i>
+        </a>
+      </div>
+      <div id="master-table-collapse" class="panel-collapse collapse collapse-master in">
+        <div class="panel-body">
+
+          <!-- BEGIN table form -->
+          <div name="masterView">
+            <div lift="surround?with=parts/form/master-table;at=table-definition">
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr name="master-table-sortable">
+                    <th name="master-table-header"><span name="master-table-th"></span></th>
+                    <th>Aktion</th>
+                  </tr>
+                </thead>
+                <tbody name="master-table-body" id="tbl-model-list">
+                  <tr name="eachModelObj" class="rowlink">
+                    <td name="master-table-column"></td>
+                    <td>
+                      <span name="actions">Actions Hook</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- END Form -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#master-detail-accordion" href="#detail-view-collapse">
+          Details <i style="font-size: 20px;" class="icon-double-angle-down pull-right"></i>
+        </a>
+      </div>
+      <div id="detail-view-collapse" class="panel-collapse collapse collapse-detail out">
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div name="detailView"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

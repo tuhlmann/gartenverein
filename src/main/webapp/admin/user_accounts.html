@@ -1,0 +1,19 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div lift="MasterDetailView?tpl=master-detail-view;ctrl=UserAccounts;h=Angemeldete Nutzer;btn=Neuer Nutzer">
+    <div id="actions">
+      <button name="edit" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Bearbeiten"><i style="font-size: 12px;" class="icon-edit"></i></button>
+      <button name="reset-pwd" type="button" class="btn btn-info btn-xs" data-toggle="tooltip" title="Passwort zurücksetzen"><i style="font-size: 12px;" class="icon-magnet"></i></button>
+      <button name="remove" type="button" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>
+    </div>
+  </div>
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.admin.UserAccount.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>

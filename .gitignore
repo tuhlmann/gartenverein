@@ -1,0 +1,11 @@
+lift_proto.db.trace.db
+/.idea
+/.idea_modules
+/target
+/.cache
+/.classpath
+/.project
+tags
+/logs
+/.ensime_cache/
+/projectFilesBackup/

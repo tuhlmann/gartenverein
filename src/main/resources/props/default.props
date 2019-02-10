@@ -1,0 +1,26 @@
+# Our Mongo database
+mongo.default.name=gartenverein
+
+mongo.default.host = localhost
+mongo.default.port = 27017
+
+mail.charset = UTF-8
+
+mail.smtp.port = 25
+mail.smtp.auth = true
+
+mail.smtp.host=a_smtp_host
+mail.smtp.user=smtp_host_user
+mail.smtp.pass=smtp_host_users_pwd
+
+system.email.address = gartenhans@example.com
+system.user.password = gartenhans
+
+# How do we persist uploaded documents. Allowed values: file, ...
+document.service.type = file
+
+document.service.file.root = /ewu/garten/upload
+
+placeholder.email.domain = your-garden-community.de
+
+file_download.api.key = a-very-secure-api-key

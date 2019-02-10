@@ -1,0 +1,98 @@
+<div data-lift="surround?with=base-sidebar;at=content">
+
+  <div class="lift:reactive"></div>
+
+  <div lift="HasPerm?p=team:create">
+    <div class="row-fluid" >
+      <div class="span12">
+        <h4>Team Mitglied hinzufügen</h4>
+      </div>
+    </div>
+    <div class="row-fluid" >
+      <div class="span12">
+        <div lift="Team.inviteNewMembers" name="invitation-widget" class="well">
+          <form lift="form.ajax">
+            <div class="row-fluid">
+              <div class="span4">
+                <fieldset>
+                  <label>1. (optional) Vorname eingeben</label>
+                  <input name="invitationFirstname" type="text" >
+                  <span data-alertid="temporaryFirstname_id_err" class="alert-block"></span>
+                  <label>2. Emailadresse eingeben</label>
+                  <input name="invitationEmail" type="email" >
+                  <span data-alertid="temporaryEmail_id_err" class="alert-block"></span>
+                  <button style="margin-top:15px;" name="invite-member" type="submit" class="btn btn-primary">Teammitglied einladen</button>
+                </fieldset>
+              </div>
+              <div class="span4">
+                <fieldset>
+                  <label>(optional) Nachname eingeben</label>
+                  <input name="invitationLastname" type="text" >
+                  <span data-alertid="temporaryLastname_id_err" class="alert-block"></span>
+                  <label>3. Rolle auswählen:</label>
+                  <span name="invitation-role"></span>
+                </fieldset>
+              </div>
+              <div class="span4">
+                <fieldset>
+                  <label>4. Nachricht eingeben (optional)</label>
+                  <textarea name="invitation-message" rows="4"></textarea>
+                  <input type="hidden" name="submit-helper"><br>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 lift="Team.createNew"><span lift="Loc.i">team.members</span>
+    <!--<button style="margin-bottom:5px; vertical-align: bottom;" name="new-screen" type="button" class="pull-right btn btn-primary">Neues Teammitglied</button>-->
+  </h4>
+
+  <!-- BEGIN table form -->
+  <div lift="Team.masterView?eager_eval=true">
+    <div lift="surround?with=parts/form/master-table;at=table-definition">
+      <table class="table table-bordered table-striped table-condensed">
+        <thead>
+          <tr name="master-table-sortable">
+            <th name="master-table-header"><span name="master-table-th"></span></th>
+            <th>Aktion</th>
+          </tr>
+        </thead>
+        <tbody name="master-table-body" id="tbl-model-list">
+          <tr name="eachModelObj" class="rowlink">
+            <td name="master-table-column"></td>
+            <td>
+              <button name="edit" type="button" class="btn btn-info btn-mini" data-toggle="tooltip" title="Mitglied bearbeiten">
+                <span lift="HasPerm?p=team:edit"><i style="font-size: 12px;" class="icon-edit"></i></span>
+                <span lift="LacksPerm?p=team:edit">Anzeigen</span>
+              </button>
+              <button name="invite" type="button" class="btn btn-info btn-mini" data-toggle="tooltip" title="Einladung erneut versenden"><i style="font-size: 12px;" class="icon-share-alt"></i></button>
+              <button name="remove" type="button" class="btn btn-danger btn-mini" data-toggle="tooltip" title="Mitglied löschen"><i style="font-size: 12px;" class="icon-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- END Form -->
+
+<!--
+  <div class="row-fluid">
+    <div class="span12">
+      <div lift="Clients.detailView"></div>
+    </div>
+  </div>
+-->
+
+  <lift:tail>
+    <script>
+      $(document).ready(function() {
+        App.views.management.Team.init();
+      });
+    </script>
+  </lift:tail>
+
+</div>
